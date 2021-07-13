@@ -1,0 +1,58 @@
+.gameBoard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.settings {
+  display: flex;
+  width: 18rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings select {
+  width: 10rem;
+  padding: 0.5rem;
+}
+
+.area {
+  margin-top: 2rem;
+}
+
+.areaRow {
+  display: flex;
+}
+
+.areaRow:last-child div {
+  border-bottom: 0.15rem solid var(--color-black);
+}
+
+.areaRow div:last-child {
+  border-right: 0.15rem solid var(--color-black);
+}
+
+.stats {
+  margin-left: 4rem;
+}
+
+.statsTitle {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.statsItems {
+  margin-top: 2rem;
+  height: 32rem;
+  overflow: overlay;
+}
+
+.statsItem {
+  width: 12rem;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-yellow);
+  color: var(--color-dark-yellow);
+  font-weight: bold;
+  border: 1px solid var(--color-light-yellow);
+  border-radius: 0.4rem;
+}

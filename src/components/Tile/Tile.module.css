@@ -1,0 +1,10 @@
+.tile {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-top: 0.15rem solid var(--color-black);
+  border-left: 0.15rem solid var(--color-black);
+}
+
+.active {
+  background-color: var(--color-light-blue);
+}

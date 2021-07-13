@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useAsync } from 'react-async';
+import fetchGameConfig from 'services/api/fetchGameConfig';
+
+import Layout from 'components/Layout';
+import Loading from 'components/Loading';
+import Error from 'components/Error';
+import GameBoard from 'components/GameBoard';
 
 function App() {
+  const { data: gameConfig, error, isPending } = useAsync({
+    promiseFn: fetchGameConfig,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      {isPending && <Loading />}
+      {error && <Error />}
+      {gameConfig && <GameBoard gameConfig={gameConfig} />}
+    </Layout>
   );
 }
 

@@ -1,0 +1,10 @@
+{
+  "common.start": "Start",
+  "common.hoverSquares": "Hover squares",
+  "common.somethingWentWrong": "Something went wrong",
+  "common.loading": "Loading...",
+  "gameMode.pickMode": "Pick Mode",
+  "gameMode.easyMode": "Easy",
+  "gameMode.normalMode": "Normal",
+  "gameMode.hardMode": "Hard"
+}
